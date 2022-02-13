@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau média{% endblock %}
+
+
+{% block body %}
+
+<div class="container py-3  d-flex justify-content-center">
+    <div class="card card-bo m-5">
+      <div class="card-body p-5 m-3">
+
+          <div class="md-5 mt-md-4 pb-3">
+
+              <h2 class="fw-bold mb-2 title">Nouveau Média</h2>
+
+          </div>
+
+          <p class="mb-5">
+
+    {{ include('edit/edit_media/_form.html.twig') }}
+
+            <div class="d-flex justify-content-center m-3">
+
+            <a href="{{ path('edit_media_index') }}" class="btn">Retour à la liste</a>
+
+            </div>
+
+            </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

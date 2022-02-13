@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div class="d-flex flex-row bd-highlight mb-3">
+
+        <aside class="p-2 bd-highlight">
+            {% include 'inc/_sidebar.html.twig' %}
+        </aside>
+
+        <div class="p-2 bd-highlight justify-content-center container-fluid">
+
+
+
+                <h2 class="title mt-4">Explorer la galerie</h2>
+
+                <div class="filtres p-4 my-5">
+                    {{ render(controller( 'App\\Controller\\FiltreController::renderFiltre')) }}
+                </div>
+        <div id="content">
+            {{ include('pages/_contentFiles.html.twig') }}
+        </div>
+    </div>
+                    
+</div>
+
+{% endblock %}
